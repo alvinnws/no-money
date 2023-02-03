@@ -21,14 +21,26 @@
             function alert(message, type) {
             var wrapper = document.createElement('div')
             wrapper.innerHTML = '<div class="alert alert-secondary alert-dismissible" role="alert">' + message + document.querySelector('#name').value + '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>'
-
             alertPlaceholder.prepend(wrapper)
             }
 
             if (alertTrigger) {
             alertTrigger.addEventListener('click', function () {
                 alert('Submitted: ')
-            })
+                })
+            }
+
+            var clear = document.getElementById('clear')
+            if (clear) {
+                clear.addEventListener('click', function () {
+                    document.querySelector('#name').value = "";
+                    document.querySelector('#food').checked = false;
+                    document.querySelector('#transport').checked = false;
+                    document.querySelector('#shopping').checked = false;
+                    document.querySelector('#earned').checked = false;
+                    document.querySelector('#other').checked - false;
+                    document.querySelector('#cost').value = ""
+                })
             }
 
             document.querySelector('form').addEventListener('submit', function(e){
@@ -63,10 +75,10 @@
                 });
         });});
     </script>
-    <header class="container-md my-5">
+    <header class="container-md my-5 mx-2">
         <h1 class="fw-bold">Money Tracker :D</h1>
     </header>
-    <main class="container-md space">
+    <main class="container-md mx-2 space">
         <form onsubmit="return false;">
             <div class="input-group">
                 <span class="input-group-text" for="name">Item Name:</span>
@@ -86,7 +98,10 @@
                 <span class="input-group-text" for="cost">$</span>
                 <input type="text" class="form-control" id="cost" name="cost">
             </div>
-            <button class="btn btn-primary" type="submit" id="submit">Submit</button>
+            <div class="col text-center">
+                <button class="btn btn-primary text-center" type="submit" id="submit">Submit</button>
+                <button class="btn btn-secondary text-center" type="text" id="clear">Clear</button>
+            </div>
         </form>
         <div style="padding:1em"></div>
         <div id="alert"></div>
