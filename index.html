@@ -28,9 +28,11 @@
             alertTrigger.addEventListener('click', function () {
                 alert('Submitted: ')
                 })
-            }
+            };
 
-            var clear = document.getElementById('clear')
+            var clearing;
+
+            var clear = document.getElementById('clear');
             if (clear) {
                 clear.addEventListener('click', function () {
                     document.querySelector('#name').value = "";
@@ -39,12 +41,17 @@
                     document.querySelector('#shopping').checked = false;
                     document.querySelector('#earned').checked = false;
                     document.querySelector('#other').checked - false;
-                    document.querySelector('#cost').value = ""
+                    document.querySelector('#cost').value = "";
+                    clearing = true
                 })
-            }
+            };
 
             document.querySelector('form').addEventListener('submit', function(e){
                 e.preventDefault();
+                if (clearing) {
+                    clearing = false;
+                    return
+                };
                 var name = "entry.1727471683=" + document.querySelector('#name').value;
                 var type = "entry.736460471=";
                 if (document.querySelector('#food').checked) {
