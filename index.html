@@ -64,6 +64,8 @@
                     type = type + document.querySelector('#earned').value;
                 }else if (document.querySelector('#other').checked) {
                     type = type + document.querySelector('#other').value;
+                }else if (document.querySelector('#sel').checked) {
+                    type = type + document.querySelector('#sel').value;
                 }
                 var cost = "entry.2033811572=" + document.querySelector('#cost').value;
                 var data = name + "&" + cost + "&" + type + "&entry.736460471_sentinel=&fvv=1&partialResponse=%5Bnull%2Cnull%2C%22-4600192115741681256%22%5D&pageHistory=0&fbzx=-4600192115741681256";
@@ -101,6 +103,8 @@
             <label for="earned">Earned</label><br>
             <input type="radio" class="form-check-input" id="other" name="type" value="other">
             <label for="other">Other</label><br>
+            <input type="radio" class="form-check-input" id="sel" name="type" value="sel">
+            <label for="other">Sel</label><br>
             <div class="input-group mb-3">    
                 <span class="input-group-text" for="cost">$</span>
                 <input type="text" class="form-control" id="cost" name="cost">
