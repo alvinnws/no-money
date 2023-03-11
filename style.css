@@ -22,7 +22,6 @@ label div span {
     text-align: center;
 }
 
-
 label div:before {
     content: '';
     border-radius: 10px;
@@ -38,4 +37,8 @@ label div:before {
 label input:checked+div:before {
     background-color: #999999;
     transition: all 300ms;
+}
+
+.typebuttons {
+    text-align: center;
 }

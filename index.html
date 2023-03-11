@@ -84,51 +84,53 @@
                 });
         });});
     </script>
-    <header class="container-md my-5 mx-2">
+    <header class="container-md my-4 text-center">
         <h1 class="fw-bold">Money Tracker :D</h1>
     </header>
-    <main class="container-md mx-2 space">
+    <main class="container-md space">
         <form onsubmit="return false;">
             <div class="input-group">
-                <span class="input-group-text" for="name">Item Name:</span>
+                <span class="input-group-text" for="name">Item:</span>
                 <input type="text" class="form-control" placeholder="Name" id="name" name="name">
             </div>
-            <label for="food">
-                <input type="radio" id="food" name="type" value="food">
-                <div>
-                    <span>Food</span>
-                </div>
-            </label>
-            <label for="transport">
-                <input type="radio" id="transport" name="type" value="transport">
-                <div>
-                    <span>Transport</span>
-                </div>
-            </label>
-            <label for="shopping">
-                <input type="radio" id="shopping" name="type" value="shopping">
-                <div>
-                    <span>Shopping</span>
-                </div>
-            </label>
-            <label for="earned">
-                <input type="radio" id="earned" name="type" value="earned">
-                <div>
-                    <span>Earned</span>
-                </div>
-            </label>
-            <label for="other">
-                <input type="radio" id="other" name="type" value="other">
-                <div>
-                    <span>Other</span>
-                </div>
-            </label>
-            <label for="sel">
-                <input type="radio" id="sel" name="type" value="sel">
-                <div>
-                    <span>&lt;3</span>
-                </div>
-            </label>
+            <div class="typebuttons">
+                <label for="food">
+                    <input type="radio" id="food" name="type" value="food">
+                    <div>
+                        <span>Food</span>
+                    </div>
+                </label>
+                <label for="transport">
+                    <input type="radio" id="transport" name="type" value="transport">
+                    <div>
+                        <span>Transport</span>
+                    </div>
+                </label>
+                <label for="shopping">
+                    <input type="radio" id="shopping" name="type" value="shopping">
+                    <div>
+                        <span>Shopping</span>
+                    </div>
+                </label>
+                <label for="earned">
+                    <input type="radio" id="earned" name="type" value="earned">
+                    <div>
+                        <span>Earned</span>
+                    </div>
+                </label>
+                <label for="other">
+                    <input type="radio" id="other" name="type" value="other">
+                    <div>
+                        <span>Other</span>
+                    </div>
+                </label>
+                <label for="sel">
+                    <input type="radio" id="sel" name="type" value="sel">
+                    <div>
+                        <span>&lt;3</span>
+                    </div>
+                </label>
+            </div>
             <div class="input-group mb-3">    
                 <span class="input-group-text" for="cost">$</span>
                 <input type="text" class="form-control" placeholder="0.00" id="cost" name="cost">
