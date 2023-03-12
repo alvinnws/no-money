@@ -56,7 +56,7 @@
                 var type = "entry.736460471=";
                 if (document.querySelector('#food').checked) {
                     type = type + document.querySelector('#food').value;
-                } else if (document.querySelector('#transport').checked) {
+                }else if (document.querySelector('#transport').checked) {
                     type = type + document.querySelector('#transport').value;
                 }else if (document.querySelector('#shopping').checked) {
                     type = type + document.querySelector('#shopping').value;
@@ -67,7 +67,13 @@
                 }else if (document.querySelector('#sel').checked) {
                     type = type + document.querySelector('#sel').value;
                 }
-                var cost = "entry.2033811572=" + document.querySelector('#cost').value;
+                var netcost;
+                if (document.querySelector('#gst').checked) {
+                    netcost = document.querySelector('#cost').value * 1.18
+                }else {
+                    netcost = document.querySelector('#cost').value
+                }
+                var cost = "entry.2033811572=" + netcost;
                 var data = name + "&" + cost + "&" + type + "&entry.736460471_sentinel=&fvv=1&partialResponse=%5Bnull%2Cnull%2C%22-4600192115741681256%22%5D&pageHistory=0&fbzx=-4600192115741681256";
                 console.log(data);
                 fetch("https://docs.google.com/forms/d/e/1FAIpQLScx3IjH7c4ZKGQhGsYt1OjTcpbXdTCqoKFl_KqpGE0pZklO6A/formResponse", {
@@ -84,6 +90,7 @@
                 });
         });});
     </script>
+    <div class="spacerer"></div>
     <header class="container-md my-4 text-center">
         <h1 class="fw-bold">Money Tracker :D</h1>
     </header>
@@ -93,7 +100,7 @@
                 <span class="input-group-text" for="name">Item:</span>
                 <input type="text" class="form-control" placeholder="Name" id="name" name="name">
             </div>
-            <div class="typebuttons">
+            <div class="text-center">
                 <label for="food">
                     <input type="radio" id="food" name="type" value="food">
                     <div>
@@ -131,11 +138,15 @@
                     </div>
                 </label>
             </div>
-            <div class="input-group mb-3">    
+            <div class="input-group">    
                 <span class="input-group-text" for="cost">$</span>
                 <input type="text" class="form-control" placeholder="0.00" id="cost" name="cost">
             </div>
-            <div class="col text-center">
+            <div class="text-left">
+                <input type="checkbox" class="form-check-input checkcenter" id="gst">
+                <label class="form-check-label" for="gst">GST & SC (18%)</label>
+            </div>
+            <div class="text-center">
                 <button class="btn btn-primary text-center" type="submit" id="submit">Submit</button>
                 <button class="btn btn-secondary text-center" type="text" id="clear">Clear</button>
             </div>

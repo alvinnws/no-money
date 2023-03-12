@@ -42,3 +42,15 @@ label input:checked+div:before {
 .typebuttons {
     text-align: center;
 }
+
+.spacerer{
+    margin-top: 10em;
+}
+
+.checkcenter{
+    margin-top: 9.3px;
+}
+
+.form-check-label{
+    padding-left: 3px;
+}
