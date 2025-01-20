@@ -52,8 +52,8 @@
                     clearing = false;
                     return
                 };
-                var name = "entry.1727471683=" + document.querySelector('#name').value;
-                var type = "entry.736460471=";
+                var name = "entry.2090800977=" + document.querySelector('#name').value;
+                var type = "entry.1133695563=";
                 if (document.querySelector('#food').checked) {
                     type = type + document.querySelector('#food').value;
                 }else if (document.querySelector('#transport').checked) {
@@ -67,16 +67,10 @@
                 }else if (document.querySelector('#sel').checked) {
                     type = type + document.querySelector('#sel').value;
                 }
-                var netcost;
-                if (document.querySelector('#gst').checked) {
-                    netcost = document.querySelector('#cost').value * 1.18
-                }else {
-                    netcost = document.querySelector('#cost').value
-                }
-                var cost = "entry.2033811572=" + netcost;
-                var data = name + "&" + cost + "&" + type + "&entry.736460471_sentinel=&fvv=1&partialResponse=%5Bnull%2Cnull%2C%22-4600192115741681256%22%5D&pageHistory=0&fbzx=-4600192115741681256";
+                var cost = "entry.1644659847=" + document.querySelector('#cost').value;
+                var data = name + "&" + cost + "&" + type + "&fvv=1&partialResponse=%5Bnull%2Cnull%2C%22-3475053676946426165%22%5D&pageHistory=0&fbzx=-3475053676946426165";
                 console.log(data);
-                fetch("https://docs.google.com/forms/d/e/1FAIpQLScx3IjH7c4ZKGQhGsYt1OjTcpbXdTCqoKFl_KqpGE0pZklO6A/formResponse", {
+                fetch("https://docs.google.com/forms/d/e/1FAIpQLSeysaryrzrNl3Vy0OaM7iSprSd9rwaxpVh6eGRZsFjTx8O6yw/formResponse", {
                     method: "POST",
                     mode: 'cors',
                     headers: {
